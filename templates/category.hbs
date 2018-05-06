@@ -1,0 +1,21 @@
+<div class="zh-gallery zh-gallery-category">
+    {{#each pages}}
+        <div class="zh-gallery-category-page-element">
+            <div class="zh-gallery-category-post-list">
+                <ul>
+                    {{#each posts}}
+                        <li class="zh-card zh-gallery-link">
+                            <a href="{{url}}">
+                                <figure>
+                                    <img src="{{image}}" alt="{{../name}} {{title}}" />
+                                    <figcaption><h{{@root.h}}>Enlace: {{../name}} {{title}}</h{{@root.h}}> </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/each}}
+</div>
+

@@ -1,0 +1,24 @@
+<div class="zh-gallery zh-gallery-single">
+    {{#each pages}}
+    <div class="zh-gallery-single-page-element zh-card {{#if posts.length}}{{else}}zh-gallery-no-post{{/if}}">
+        <div class="zh-gallery-single-post-image-wrapper ">
+            <a href="{{url}}">
+                <div class="zh-gallery-single-mask">
+                    <figure>
+                        <img src="{{image}}" alt="{{name}}"/>
+                        <figcaption><h{{@root.h}}>{{name}}</h{{@root.h}}></figcaption>
+                    </figure>
+                </div>
+            </a>
+        </div>
+        <div class="zh-gallery-single-post-list">
+            <ul>
+                {{#each posts}}
+                    <li class="zh-gallery-link"><a href="{{url}}"><h{{@root.hh}}>{{title}} </h{{@root.hh}}></a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
